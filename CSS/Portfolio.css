@@ -1,0 +1,75 @@
+nav {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+}
+body {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+section {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+#typing-span {
+  color: #fff6cc;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.skills-tag-container {
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skill-tag {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15); /* light frosted-glass look */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+  backdrop-filter: blur(6px); /* optional glassmorphism effect */
+}
+.skill-tag:hover {
+  background: #ffffff;
+  color: #ff5f6d; /* matches the left side of your gradient */
+  transform: translateY(-3px);
+  cursor: default;
+}
+/* Experience Section Card Styles */
+#Experience .card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#Experience .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 174, 255, 0.2);
+}
+#Experience ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+#Experience li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+#Experience .card-body .fs-2 {
+  font-size: 1.75rem;
+}
+.edu-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 174, 255, 0.15);
+}
