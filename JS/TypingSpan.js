@@ -1,7 +1,6 @@
 $(document).ready(function () {
   // Initialize Bootstrap tooltip
   $('[data-toggle="tooltip"]').tooltip();
-
   // Typing effect code
   const roles = [
     "Software Engineer",
@@ -15,7 +14,6 @@ $(document).ready(function () {
   const erasingSpeed = 20; // Speed of erasing effect (milliseconds)
   const delayBetweenRoles = 500; // Delay between displaying roles (milliseconds)
   const typingSpan = document.getElementById("typing-span");
-
   if (typingSpan) {
     function typeRole() {
       if (currentCharIndex < roles[currentRoleIndex].length) {
@@ -27,7 +25,6 @@ $(document).ready(function () {
         setTimeout(eraseRole, delayBetweenRoles);
       }
     }
-
     function eraseRole() {
       if (currentCharIndex > 0) {
         typingSpan.textContent = roles[currentRoleIndex].substring(
@@ -41,31 +38,22 @@ $(document).ready(function () {
         setTimeout(typeRole, typingSpeed);
       }
     }
-
     // Start typing effect
     setTimeout(typeRole, delayBetweenRoles);
   } else {
     console.error('Element with ID "typing-span" not found');
   }
-
-  // Clipboard copying functionality
-  function copyText(type) {
-    let text = "";
-
-    if (type === "email") {
-      text = "saideepbhange11022002@gmail.com";
-    } else if (type === "phone") {
-      text = "+91-9594796488";
-    }
-
-    // Use the Clipboard API for copying text
-    navigator.clipboard
-      .writeText(text)
-      .then(function () {
-        alert(type === "email" ? "Email copied!" : "Phone number copied!");
-      })
-      .catch(function (err) {
-        console.error("Failed to copy text: ", err);
-      });
-  }
 });
+function copyText(type) {
+  if (type === "email") {
+    navigator.clipboard.writeText(
+      document.getElementById("email-link").innerText
+    );
+    alert("Email copied to clipboard!");
+  } else if (type === "phone") {
+    navigator.clipboard.writeText(
+      document.getElementById("phone-number").innerText
+    );
+    alert("Phone number copied to clipboard!");
+  }
+}

@@ -1,385 +1,1534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saideep - Software Developer</title>
-    <!-- CSS Files -->
-    <link rel="icon" type="image/x-icon" href="/FILES/SAIDEEP_PP.jpg" />
-    <link rel="stylesheet" href="/CSS/Portfolio.css" />
-    <link rel="stylesheet" href="/CSS/BootstrapMin.css" />
-    <!-- Add this in <head> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Saideep Bhange — Software Developer. Projects in .NET, Android, Web Development. Contact for collaboration or hire."
     />
-    <!-- JS Files -->
-    <script src="/JS/JQuery_V3_6_0Min.js"></script>
-    <!-- I Need To Add This JQuery First For Add Some Functions in My Javascript -->
-    <script src="/JS/Portfolio.js"></script>
-    <script src="/JS/BootstrapBundleMin.js"></script>
+    <link rel="icon" type="image/x-icon" href="FILES/SaideepBhangeImage.png" />
+    <link rel="preload" href="FILES/SaideepBhangeImage.png" as="image" />
+    <!-- Tailwind CSS CDN (for development only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
+    <!-- Bootstrap JS (for tooltips) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="JS/TypingSpan.js"></script>
   </head>
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="500">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container">
-        <a class="text-decoration-none display-5 fw-bold text-white" href="#"
-          >Saideep Bhange</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#Home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#AboutMe">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#Skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#Experience"
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <body>
+    <!-- HEADER / NAVIGATION -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-lg shadow-lg bg-gradient-to-r from-indigo-600/80 via-violet-600/70 to-cyan-500/80"
+    >
+      <nav
+        class="mx-auto max-w-7xl flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a
+            href="#"
+            class="text-lg font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-200 hover:from-cyan-200 hover:to-white transition-all duration-300"
+          >
+            Saideep Bhange
+          </a>
+        </div>
+
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            onclick="document.getElementById('mobile-menu').showModal()"
+            class="inline-flex items-center justify-center rounded-lg p-2.5 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+          >
+            <span class="sr-only">Open main menu</span>
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="hidden lg:flex lg:gap-x-6 xl:gap-x-8">
+          <a
+            href="#Home"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Home</a
+          >
+
+          <a
+            href="#AboutMe"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >About</a
+          >
+          <a
+            href="#Experience"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Experience</a
+          >
+          <a
+            href="#Education"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Education</a
+          >
+
+          <a
+            href="#Projects"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Projects</a
+          >
+          <a
+            href="#Skills"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Skills</a
+          >
+          <a
+            href="#PaperPublications"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Publications</a
+          >
+          <a
+            href="#Contact"
+            class="relative text-sm font-semibold text-white/90 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-300 after:to-indigo-300 after:transition-all after:duration-300 hover:after:w-full"
+            >Contact</a
+          >
+        </div>
+      </nav>
+
+      <dialog id="mobile-menu" class="lg:hidden backdrop:bg-black/40">
+        <div class="fixed inset-0 overflow-y-auto">
+          <div
+            class="fixed inset-y-0 right-0 w-full max-w-sm bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 p-6 shadow-2xl overflow-y-auto"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-white">Saideep Bhange</span>
+              <button
+                onclick="document.getElementById('mobile-menu').close()"
+                class="rounded-lg p-2 text-white hover:bg-white/10"
+              >
+                <i class="fa-solid fa-xmark text-2xl"></i>
+              </button>
+            </div>
+
+            <div class="mt-8 space-y-2 pb-10">
+              <a
+                href="#Home"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Home</a
+              >
+              <a
+                href="#AboutMe"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >About Me</a
+              >
+              <a
+                href="#Experience"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
                 >Experience</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#Projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white fs-4" href="#Contact">Contact</a>
-            </li>
-          </ul>
+              <a
+                href="#Education"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Education</a
+              >
+              <a
+                href="#Projects"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Projects</a
+              >
+              <a
+                href="#Skills"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Skills</a
+              >
+              <a
+                href="#PaperPublications"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Paper & Publications</a
+              >
+              <a
+                href="#Awards"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Awards</a
+              >
+              <a
+                href="#Certificates"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Certificates</a
+              >
+              <a
+                href="#Contact"
+                class="block rounded-xl px-4 py-3 font-semibold text-white bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-cyan-500/30 transition-all"
+                >Contact</a
+              >
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- Home Section -->
+      </dialog>
+    </header>
+    <!-- Hero Section -->
     <section
       id="Home"
-      class="container d-flex align-items-center justify-content-center"
+      class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 via-gray-100 to-gray-50 pt-20 lg:pt-0"
     >
-      <div class="row align-items-center flex-fill">
-        <!-- Left: Text -->
-        <div class="col-lg-6 text-center text-lg-start">
-          <h1 class="fw-bold display-1 text-white">Hi, I'm Saideep Bhange</h1>
-          <h4 class="text-white fs-1">I'm <span id="typing-span"></span></h4>
-          <div class="mt-1">
-            <!-- Social Media Icons -->
+      <div
+        class="container mx-auto px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-12"
+      >
+        <div class="flex-1 text-center lg:text-left">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight"
+          >
+            Hi, I'm
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
+            >
+              Saideep Bhange
+            </span>
+          </h1>
+
+          <h2
+            class="text-2xl sm:text-3xl font-semibold text-gray-700 mb-8 h-12"
+          >
+            I'm
+            <span
+              id="typing-span"
+              class="text-indigo-600 font-bold border-r-4 border-indigo-600 animate-pulse"
+            ></span>
+          </h2>
+
+          <div class="flex justify-center lg:justify-start gap-8 mb-10">
             <a
               href="mailto:saideepbhange11022002@gmail.com"
-              class="me-3 btn btn-outline-light"
-              target="_blank"
-              >Gmail</a
+              class="group flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-all duration-300"
             >
+              <i class="fa-solid fa-envelope group-hover:scale-110"></i>
+              <span class="font-medium">Gmail</span>
+            </a>
             <a
               href="https://github.com/SAIDEEPBHANGE"
-              class="me-3 btn btn-outline-light"
               target="_blank"
-              >Github</a
+              class="group flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-all duration-300"
             >
+              <i class="fa-brands fa-github group-hover:scale-110"></i>
+              <span class="font-medium">GitHub</span>
+            </a>
             <a
               href="https://in.linkedin.com/in/saideep-bhange"
-              class="me-3 btn btn-outline-light"
               target="_blank"
-              >LinkedIn</a
+              class="group flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-all duration-300"
             >
+              <i class="fa-brands fa-linkedin group-hover:scale-110"></i>
+              <span class="font-medium">LinkedIn</span>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
+          >
+            <a
+              href="#Contact"
+              class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-bold text-indigo-600 border-2 border-indigo-600 hover:bg-indigo-50 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
           </div>
         </div>
-        <!-- Right: Animated Image Border -->
-        <div class="col-lg-6 text-center mt-4 mt-md-0">
-          <div class="profile-border">
+
+        <div class="flex-1 flex justify-center lg:justify-end">
+          <div
+            class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px]"
+          >
+            <div
+              class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-indigo-400 via-purple-400 to-pink-400 opacity-20 blur-3xl -z-10 animate-pulse"
+            ></div>
+
             <img
-              src="/FILES/SAIDEEP_PP.jpg"
-              alt="Profile"
-              class="img-fluid rounded-circle shadow-lg"
+              src="FILES/SaideepBhangeImage.png"
+              alt="Portrait of Saideep Bhange"
+              class="w-full h-full rounded-3xl object-cover shadow-2xl border-4 border-white transition-all duration-500 hover:rotate-2 hover:scale-105"
             />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="AboutMe" class="container">
-      <div class="row justify-content-center">
-        <!-- Section Heading -->
-        <div class="col-12 text-center mb-4">
-          <h2 class="display-4 text-white fw-bold">About Me</h2>
-        </div>
-        <!-- About Me Content -->
-        <div class="col-12 bg-transparent">
-          <div class="card shadow-lg rounded-3 p-4 bg-transparent">
-            <div class="card-body">
-              <p class="fs-5 text-white mb-4">
-                I am a B.Tech graduate in Computer Science with a strong passion
-                for technology and innovation. My journey in software
-                development has allowed me to build expertise in programming
-                languages like C++, C#, Java, and Python, along with proficiency
-                in web development, Android app development, and .NET MVC.
-                During my academic career, I collaborated on an Android project
-                that streamlines communication between ambulance drivers and
-                patients, focusing on reducing response times and improving
-                access to medical services. This project highlighted my ability
-                to create user-friendly applications and solve real-world
-                problems through technology.
-              </p>
-              <p class="fs-5 text-white">
-                Currently, I am enhancing my coding and problem-solving skills
-                by solving LeetCode challenges, aiming to continuously improve
-                my logic and technical abilities. I have experience in
-                developing efficient tools for project management, license
-                tracking, and report generation, which have significantly
-                optimized processes and reduced manual efforts by up to 70%. I
-                am also proficient in integrating GPS, API technologies, and
-                working with SQL databases, making me a versatile software
-                engineer committed to delivering high-quality solutions.
-              </p>
+
+            <div
+              class="absolute -bottom-4 -right-4 w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center -z-10 hidden sm:flex"
+            >
+              <i class="fa-solid fa-code text-indigo-500 text-3xl"></i>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Software Skills Section -->
-    <section class="container" id="Skills">
-      <div class="h1 text-center text-white fw-bold mb-5">Software Skills</div>
-      <div
-        class="skills-tag-container d-flex flex-wrap justify-content-center gap-3"
-      >
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">C#</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">.NET (MVC)</span>
-        <span class="skill-tag">ReactJS</span>
-        <span class="skill-tag">Transact-SQL</span>
-        <span class="skill-tag">C Language</span>
-        <span class="skill-tag">VB.NET</span>
-        <span class="skill-tag">Pandas</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">Data Algorithms</span>
-        <span class="skill-tag">Microsoft Access</span>
+    <!-- About Me Section -->
+    <section id="AboutMe" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
+          >
+            About Me
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div class="grid gap-16 lg:grid-cols-2 items-start">
+          <div class="space-y-8">
+            <div class="text-gray-700 text-lg sm:text-xl leading-relaxed">
+              <p class="mb-6">
+                I'm Saideep, a
+                <span class="text-indigo-600 font-semibold"
+                  >Computer Science Engineer</span
+                >
+                with a passion for building high-performance tools and backend
+                systems. I believe in the philosophy of
+                <span class="italic font-medium">"starting on day one,"</span>
+                rather than waiting for one day.
+              </p>
+              <p>
+                Whether it's optimizing report-extraction tools or building
+                scalable Android applications, I enjoy turning complex logic
+                into efficient, user-centric software.
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div
+                class="p-4 bg-white rounded-xl shadow-sm border-l-4 border-indigo-500"
+              >
+                <h4 class="font-bold text-gray-900 mb-2">Languages</h4>
+                <p class="text-gray-600 text-sm">C++, C#, Java, Python</p>
+              </div>
+              <div
+                class="p-4 bg-white rounded-xl shadow-sm border-l-4 border-purple-500"
+              >
+                <h4 class="font-bold text-gray-900 mb-2">Web & Mobile</h4>
+                <p class="text-gray-600 text-sm">
+                  .NET (MVC), ReactJS, Android
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-indigo-100 text-indigo-700 hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default shadow-sm"
+                >C++</span
+              >
+              <span
+                class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-purple-100 text-purple-700 hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-default shadow-sm"
+                >.NET</span
+              >
+              <span
+                class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-pink-100 text-pink-700 hover:bg-pink-600 hover:text-white transition-all duration-300 cursor-default shadow-sm"
+                >ReactJS</span
+              >
+              <span
+                class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-default shadow-sm"
+                >SQL</span
+              >
+              <span
+                class="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all duration-300 cursor-default shadow-sm"
+                >Android</span
+              >
+            </div>
+          </div>
+
+          <div class="sticky top-28 space-y-8">
+            <div
+              class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 relative overflow-hidden group"
+            >
+              <div
+                class="absolute -right-10 -top-10 w-32 h-32 bg-indigo-50 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out -z-0"
+              ></div>
+
+              <h3
+                class="relative z-10 text-xl font-extrabold text-white px-6 py-2 rounded-xl mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 inline-block shadow-md"
+              >
+                Quick Facts
+              </h3>
+
+              <div class="relative z-10 grid grid-cols-2 gap-y-8 gap-x-4">
+                <div class="flex flex-col">
+                  <span
+                    class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                    >Location</span
+                  >
+                  <span class="text-gray-800 font-semibold">Kalyan, Thane</span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                    >Current Role</span
+                  >
+                  <span class="text-gray-800 font-semibold"
+                    >Software Engineer</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                    >Experience</span
+                  >
+                  <span class="text-gray-800 font-semibold">1+ Year</span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                    >Education</span
+                  >
+                  <span class="text-gray-800 font-semibold">B.Tech (CSE)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#Contact"
+                class="flex-1 flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-indigo-600 border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Let's Talk
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Experience Section -->
-    <section id="Experience" class="container">
-      <div class="h1 text-center fw-bold text-white mb-5">Experience</div>
-      <!-- Job Experience Card -->
-      <div class="card shadow-sm mb-4">
-        <div class="card-body">
-          <div
-            class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row text-white"
+    <section id="Experience" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
           >
-            <!-- Job Title and Company -->
-            <div class="fs-2 fw-bold">
-              Seatrium Engineering - Assistant (Software) Engineer
-            </div>
-            <!-- Job Duration -->
-            <div class="text-white fs-6 mt-2 mt-md-0">
-              January 2024 – Present
-            </div>
-          </div>
-          <!-- Experience Details -->
-          <div class="fs-6">
-            <ul>
-              <li>
-                License Management Portal for S3D: Developed a web-based portal
-                using .NET MVC, optimizing license tracking and PID retrieval,
-                improving efficiency by 50%.
-              </li>
-              <li>
-                Ticketing System: Built a comprehensive system to track and
-                prioritize project requests, reducing ticket resolution time by
-                40%.
-              </li>
-              <li>
-                E-Library: Created a centralized digital repository for project
-                documentation, improving search ability and document access by
-                60%.
-              </li>
-              <li>
-                Drawing Item Tag Extractor: Automated the process reducing
-                manual work by 70% with a C# Windows Forms application.
-              </li>
-              <li>
-                SQL Queries Development: Developed and optimized SQL queries for
-                license tracking and report generation, reducing data errors by
-                30%.
-              </li>
-              <li>
-                Project Planner: Designed a Project Planner app with Gantt
-                charts and progress tracking, cutting planning time by 40%.
-              </li>
-              <li>
-                Project Report Extractor: Built a tool to generate detailed
-                project reports, decreasing report generation time by 50%.
-              </li>
-            </ul>
+            Professional Experience
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div
+          class="relative border-l-4 border-indigo-100 ml-4 lg:ml-8 space-y-12"
+        >
+          <div class="relative pl-8 lg:pl-12">
+            <div
+              class="absolute -left-[14px] top-2 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 shadow-sm z-10"
+            ></div>
+
+            <article
+              class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-500 group"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6"
+              >
+                <div>
+                  <h3
+                    class="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors"
+                  >
+                    Seatrium Engineering
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-2 mt-1">
+                    <span class="text-indigo-600 font-bold"
+                      >Assistant Software Engineer</span
+                    >
+                    <span class="text-gray-300 hidden md:block">•</span>
+                    <span class="text-gray-500 font-medium"
+                      >Jan 2024 – Present</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-gray-400 bg-gray-50 px-4 py-2 rounded-xl text-sm font-medium"
+                >
+                  <i class="fa-solid fa-location-dot text-indigo-400"></i>
+                  Kalyan, Thane
+                </div>
+              </div>
+
+              <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                Leveraging the
+                <span class="text-indigo-600 font-semibold"
+                  >.NET ecosystem</span
+                >
+                and
+                <span class="text-indigo-600 font-semibold">SQL Server</span> to
+                architect scalable internal applications. My focus lies in
+                automating manual workflows, optimizing database performance,
+                and delivering data-driven insights to improve
+                cross-departmental productivity.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span
+                  class="px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-lg uppercase tracking-wider"
+                  >Full-Stack Dev</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-purple-50 text-purple-700 text-xs font-bold rounded-lg uppercase tracking-wider"
+                  >Database Optimization</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-pink-50 text-pink-700 text-xs font-bold rounded-lg uppercase tracking-wider"
+                  >Workflow Automation</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-lg uppercase tracking-wider"
+                  >Agile Methodology</span
+                >
+              </div>
+
+              <div
+                id="seatrium-details"
+                class="hidden space-y-4 border-t border-gray-50 pt-6 animate-fade-in"
+              >
+                <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                  Technical Contributions:
+                </h4>
+                <ul class="grid md:grid-cols-2 gap-4 text-gray-600">
+                  <li class="flex gap-3">
+                    <span class="text-indigo-500 font-bold">01</span>
+                    <span
+                      >Architecting web-based portals using
+                      <span class="font-semibold">ASP.NET MVC</span> and
+                      Bootstrap for enterprise resource tracking.</span
+                    >
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="text-indigo-500 font-bold">02</span>
+                    <span
+                      >Developing
+                      <span class="font-semibold">C# Desktop Applications</span>
+                      to automate complex data extraction from engineering
+                      documents.</span
+                    >
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="text-indigo-500 font-bold">03</span>
+                    <span
+                      >Optimizing
+                      <span class="font-semibold">T-SQL queries</span> and
+                      stored procedures to handle large-scale reporting
+                      datasets.</span
+                    >
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="text-indigo-500 font-bold">04</span>
+                    <span
+                      >Designing relational database schemas that maintain high
+                      data integrity for project documentation.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                onclick="toggleDetails('seatrium-details', this)"
+                class="mt-6 flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800 transition-colors group/btn"
+              >
+                <span class="btn-text">View Responsibilities</span>
+                <i
+                  class="fa-solid fa-chevron-down transition-transform duration-300 group-hover/btn:translate-y-1"
+                ></i>
+              </button>
+            </article>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      function toggleDetails(id, btn) {
+        const details = document.getElementById(id);
+        const icon = btn.querySelector("i");
+        const text = btn.querySelector(".btn-text");
+
+        if (details.classList.contains("hidden")) {
+          details.classList.remove("hidden");
+          icon.style.transform = "rotate(180deg)";
+          text.innerText = "Hide Responsibilities";
+        } else {
+          details.classList.add("hidden");
+          icon.style.transform = "rotate(0deg)";
+          text.innerText = "View Responsibilities";
+        }
+      }
+    </script>
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+    </style>
     <!-- Education Section -->
-    <section id="Education" class="container">
-      <div class="h1 text-center text-white fw-bold mb-5">Education</div>
-      <div class="row">
-        <!-- B.Tech -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 bg-transparent">
-            <div class="card-body">
-              <h5 class="fs-4 fw-bold text-white mb-1">B.Tech (CSE)</h5>
-              <p class="text-white mb-2">Solapur University</p>
-              <p class="fs-5 text-white">81.17% | CGPA: 9.43</p>
-              <p class="text-white-50">(2019–2023)</p>
-            </div>
-          </div>
-        </div>
-        <!-- HSC -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 bg-transparent">
-            <div class="card-body">
-              <h5 class="fs-4 fw-bold text-white mb-1">HSC</h5>
-              <p class="text-white mb-2">Mumbai University</p>
-              <p class="fs-5 text-white">62%</p>
-              <p class="text-white-50">(2018–2019)</p>
-            </div>
-          </div>
-        </div>
-        <!-- SSC -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100 bg-transparent">
-            <div class="card-body">
-              <h5 class="fs-4 fw-bold text-white mb-1">SSC</h5>
-              <p class="text-white mb-2">Mumbai University</p>
-              <p class="fs-5 text-white">75.2%</p>
-              <p class="text-white-50">(2016–2017)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects Section -->
-    <section class="container" id="Projects">
-      <div class="h1 text-center fw-bold text-white mb-5">Project Details</div>
-      <!-- Project Card -->
-      <div class="card shadow-sm bg-transparent mb-5">
-        <div class="card-body">
-          <!-- Project Title & Links -->
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-3 fw-bold text-white">
-              Emergency Ambulance System
-            </div>
-            <div>
-              <a href="#" class="btn text-white fs-5 me-3">Publication</a>
-              <a href="#" class="btn text-white fs-5">Report</a>
-            </div>
-          </div>
-          <!-- Technologies Used -->
-          <div class="mb-3 text-white">
-            <strong>Technologies Used:</strong>
-            <i class="fab fa-android"></i> Android,
-            <i class="fas fa-map-marker-alt"></i> Google Maps,
-            <i class="fab fa-google"></i> Google API,
-            <i class="fab fa-firebase"></i> Firebase
-          </div>
-          <!-- Description -->
-          <p class="fs-5 text-white">
-            Developed a mobile application to streamline communication between
-            users/patients and ambulance drivers. Integrated Google Maps API for
-            real-time navigation and GPS tracking to optimize ambulance routes,
-            reducing response times by 50%. Implemented Firebase for secure data
-            storage and user authentication.
-          </p>
-          <!-- Key Achievements -->
-          <div class="mt-3 text-white">
-            <strong>Key Achievements:</strong>
-            <ul>
-              <li>
-                Spearheaded GPS tracking integration, decreasing average
-                response time by 15%.
-              </li>
-              <li>
-                Ensured efficient data handling using Firebase, positively
-                impacting the healthcare sector.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="Contact" class="container">
-      <div class="h1 text-center fw-bold text-white mb-5">Contact</div>
-      <!-- Contact Card -->
-      <div class="card shadow-sm bg-transparent text-white p-4">
-        <div class="card-body overflow-y-auto">
-          <!-- Contact Details -->
-          <div
-            class="d-flex flex-wrap justify-content-between align-items-center mb-4"
+    <section id="Education" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
           >
-            <div class="fs-5">
-              <strong>Email:</strong>
+            Academic Background
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div
+          class="relative border-l-4 border-indigo-100 ml-4 lg:ml-8 space-y-12"
+        >
+          <div class="relative pl-8 lg:pl-12">
+            <div
+              class="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-white border-4 border-indigo-600 shadow-sm z-10"
+            ></div>
+
+            <article
+              class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group"
+            >
+              <div class="flex flex-col sm:flex-row items-start gap-6">
+                <div
+                  class="flex-none w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg transform group-hover:scale-110 transition-transform"
+                >
+                  SU
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-2"
+                  >
+                    <h3
+                      class="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors"
+                    >
+                      B.Tech in Computer Science & Engineering
+                    </h3>
+                    <span
+                      class="px-4 py-1 bg-indigo-50 text-indigo-600 text-sm font-bold rounded-full border border-indigo-100"
+                    >
+                      2019 – 2023
+                    </span>
+                  </div>
+                  <p class="text-lg font-semibold text-gray-700 mt-1">
+                    Solapur University
+                  </p>
+
+                  <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                    <div
+                      class="bg-gray-50 p-4 rounded-2xl border border-gray-100"
+                    >
+                      <span
+                        class="block text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                        >Academic Standing</span
+                      >
+                      <p class="text-gray-800 font-bold text-lg">
+                        9.43 CGPA
+                        <span class="text-sm font-medium text-gray-500"
+                          >(81.17%)</span
+                        >
+                      </p>
+                    </div>
+                    <div
+                      class="bg-gray-50 p-4 rounded-2xl border border-gray-100"
+                    >
+                      <span
+                        class="block text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1"
+                        >Research & Pubs</span
+                      >
+                      <p class="text-gray-700 text-sm leading-snug">
+                        Project published in
+                        <span class="font-bold">IJARSCT</span> Journal
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="mt-4 text-gray-600 leading-relaxed italic">
+                    Focus Areas: Data Structures, Algorithms, Database
+                    Management (SQL), and Mobile App Development.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="relative pl-8 lg:pl-12">
+            <div
+              class="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-white border-4 border-purple-400 shadow-sm z-10"
+            ></div>
+
+            <article
+              class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500"
+            >
+              <div class="flex flex-col sm:flex-row items-start gap-6">
+                <div
+                  class="flex-none w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-bold text-xl border border-gray-200"
+                >
+                  HSC
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-2"
+                  >
+                    <h3 class="text-xl font-bold text-gray-800">
+                      Higher Secondary Certificate
+                    </h3>
+                    <span class="text-gray-500 font-medium">2018 – 2019</span>
+                  </div>
+                  <p class="text-gray-600 font-medium">
+                    Maharashtra State Board
+                  </p>
+                  <div class="mt-4 flex items-center gap-4">
+                    <span class="text-indigo-600 font-extrabold text-xl"
+                      >62%</span
+                    >
+                    <p
+                      class="text-sm text-gray-500 border-l pl-4 border-gray-200"
+                    >
+                      Specialized in Physics, Mathematics, and Computer Science.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="relative pl-8 lg:pl-12">
+            <div
+              class="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-white border-4 border-pink-400 shadow-sm z-10"
+            ></div>
+
+            <article
+              class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500"
+            >
+              <div class="flex flex-col sm:flex-row items-start gap-6">
+                <div
+                  class="flex-none w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-bold text-xl border border-gray-200"
+                >
+                  SSC
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-2"
+                  >
+                    <h3 class="text-xl font-bold text-gray-800">
+                      Secondary School Certificate
+                    </h3>
+                    <span class="text-gray-500 font-medium">2016 – 2017</span>
+                  </div>
+                  <p class="text-gray-600 font-medium">
+                    Maharashtra State Board
+                  </p>
+                  <div class="mt-4 flex items-center gap-4">
+                    <span class="text-indigo-600 font-extrabold text-xl"
+                      >75.2%</span
+                    >
+                    <p
+                      class="text-sm text-gray-500 border-l pl-4 border-gray-200"
+                    >
+                      Core focus on Science and Advanced Mathematics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
+          >
+            Featured Projects
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div
+          class="relative border-l-4 border-indigo-100 ml-4 lg:ml-8 space-y-16"
+        >
+          <div class="relative pl-8 lg:pl-12 group">
+            <div
+              class="absolute -left-[14px] top-8 w-6 h-6 rounded-full bg-white border-4 border-indigo-500 shadow-sm z-10 transition-transform group-hover:scale-125"
+            ></div>
+
+            <article
+              class="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 lg:p-10 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+            >
+              <div class="flex flex-col lg:flex-row gap-10">
+                <div class="relative flex-none">
+                  <div
+                    class="w-full lg:w-64 h-48 rounded-2xl overflow-hidden shadow-inner bg-gray-100"
+                  >
+                    <img
+                      src="FILES/Ambulance Android Application First Page.jpg"
+                      alt="Geo-Location Ambulance Booking App"
+                      class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    />
+                  </div>
+                  <div
+                    class="absolute -top-3 -right-3 bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-lg shadow-lg uppercase tracking-wider"
+                  >
+                    Published
+                  </div>
+                </div>
+
+                <div class="flex-1">
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-4 mb-4"
+                  >
+                    <h3
+                      class="text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors"
+                    >
+                      Geo-Location Ambulance System
+                    </h3>
+                    <div
+                      class="flex items-center gap-2 text-sm font-bold text-gray-400"
+                    >
+                      <i class="fa-solid fa-calendar-days text-indigo-400"></i>
+                      April 2023
+                    </div>
+                  </div>
+
+                  <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                    A mission-critical Android application designed to bridge
+                    the gap between emergency services and patients. Built with
+                    <strong>real-time location tracking</strong> to ensure the
+                    fastest possible medical response.
+                  </p>
+
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div class="text-sm">
+                      <span
+                        class="block text-gray-400 font-bold uppercase text-[10px] tracking-widest"
+                        >Platform</span
+                      >
+                      <span class="text-gray-700 font-semibold"
+                        >Android (Native)</span
+                      >
+                    </div>
+                    <div class="text-sm">
+                      <span
+                        class="block text-gray-400 font-bold uppercase text-[10px] tracking-widest"
+                        >Database</span
+                      >
+                      <span class="text-gray-700 font-semibold"
+                        >Firebase Realtime</span
+                      >
+                    </div>
+                    <div class="text-sm">
+                      <span
+                        class="block text-gray-400 font-bold uppercase text-[10px] tracking-widest"
+                        >Research</span
+                      >
+                      <span class="text-gray-700 font-semibold text-indigo-600"
+                        >IJARSCT Journal</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2 mb-8">
+                    <span
+                      class="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-md border border-indigo-100"
+                      >JAVA</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-purple-50 text-purple-600 text-xs font-bold rounded-md border border-purple-100"
+                      >GOOGLE MAPS API</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-pink-50 text-pink-600 text-xs font-bold rounded-md border border-pink-100"
+                      >FIREBASE AUTH</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-md border border-blue-100"
+                      >GPS FILTERING</span
+                    >
+                  </div>
+
+                  <div class="flex items-center gap-6">
+                    <button
+                      onclick="toggleProjectDetails('ambulance-details', this)"
+                      class="flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800 transition-colors"
+                    >
+                      <i class="fa-solid fa-circle-info"></i>
+                      <span class="btn-text">Show Details</span>
+                    </button>
+                    <a
+                      href="https://github.com/SAIDEEPBHANGE/AmbulanceCall"
+                      class="flex items-center gap-2 text-gray-500 font-bold hover:text-gray-900 transition-colors"
+                    >
+                      <i class="fa-brands fa-github text-xl"></i>
+                      Codebase
+                    </a>
+                  </div>
+
+                  <div
+                    id="ambulance-details"
+                    class="hidden mt-8 p-6 bg-gray-50 rounded-2xl border border-dashed border-gray-200 animate-fade-in"
+                  >
+                    <h4 class="font-bold text-gray-800 mb-3">
+                      Technical Deep Dive:
+                    </h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                      <li class="flex gap-3">
+                        <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
+                        Implemented Haversine formula for server-side proximity
+                        calculations to identify nearest drivers.
+                      </li>
+                      <li class="flex gap-3">
+                        <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
+                        Integrated Firebase Cloud Messaging (FCM) for instant
+                        driver notifications.
+                      </li>
+                      <li class="flex gap-3">
+                        <i class="fa-solid fa-check text-indigo-500 mt-1"></i>
+                        Peer-reviewed and published in IJARSCT for its
+                        innovative approach to emergency response.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleProjectDetails(id, btn) {
+        const details = document.getElementById(id);
+        const text = btn.querySelector(".btn-text");
+
+        if (details.classList.contains("hidden")) {
+          details.classList.remove("hidden");
+          text.innerText = "Hide Details";
+        } else {
+          details.classList.add("hidden");
+          text.innerText = "Show Details";
+        }
+      }
+    </script>
+
+    <!-- Skills Section -->
+    <section id="Skills" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
+          >
+            Technical Skills & Competencies
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600"
+              >
+                <i class="fa-solid fa-code text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Languages</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >C++</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >C#</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Java</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Python</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600"
+              >
+                <i class="fa-solid fa-layer-group text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Web & Mobile</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >.NET MVC</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >ReactJS</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Android Development</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >HTML5 / CSS3</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600"
+              >
+                <i class="fa-solid fa-database text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Data & DB</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >SQL Server</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Transact-SQL</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Pandas</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Power BI</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600"
+              >
+                <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Tools</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Git / GitHub</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >VS Code</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >MS Access</span
+              >
+              <span
+                class="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-semibold rounded-xl border border-gray-100"
+                >Firebase</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 lg:col-span-2"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600"
+              >
+                <i class="fa-solid fa-briefcase text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">
+                Software Engineering Focus
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-xl border border-indigo-100 italic"
+                >Problem Solving</span
+              >
+              <span
+                class="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-xl border border-indigo-100 italic"
+                >Software Development Life Cycle (SDLC)</span
+              >
+              <span
+                class="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-xl border border-indigo-100 italic"
+                >Backend Systems</span
+              >
+              <span
+                class="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-xl border border-indigo-100 italic"
+                >Project Management</span
+              >
+              <span
+                class="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-xl border border-indigo-100 italic"
+                >Team Collaboration</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paper & Publications Section -->
+    <section id="PaperPublications" class="bg-gray-50 py-24">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="relative mb-16 text-center lg:text-left">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block"
+          >
+            Research & Publications
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div
+          class="relative border-l-4 border-indigo-100 ml-4 lg:ml-8 space-y-12"
+        >
+          <div class="relative pl-8 lg:pl-12">
+            <div
+              class="absolute -left-[14px] top-6 w-6 h-6 rounded-full bg-white border-4 border-purple-500 shadow-sm z-10"
+            ></div>
+
+            <article
+              class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-500"
+            >
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-purple-50 text-purple-600 text-[10px] font-bold uppercase tracking-widest mb-4"
+              >
+                <i class="fa-solid fa-book-open"></i> International Journal
+                (IJARSCT)
+              </div>
+
+              <h3 class="text-2xl font-bold text-gray-900 mb-2 leading-tight">
+                Geo-Location Based Emergency Ambulance Booking Service
+              </h3>
+
+              <div
+                class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6"
+              >
+                <span class="flex items-center gap-1"
+                  ><i class="fa-solid fa-calendar"></i> April 2023</span
+                >
+                <span class="flex items-center gap-1"
+                  ><i class="fa-solid fa-file-lines"></i> Volume 3, Issue
+                  7</span
+                >
+                <span
+                  class="flex items-center gap-1 font-semibold text-indigo-500"
+                  ><i class="fa-solid fa-certificate"></i> Peer Reviewed</span
+                >
+              </div>
+
+              <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                This research presents a GIS-integrated Android framework
+                designed to act as a digital intermediary between patients and
+                providers, specifically targeting the
+                <span class="font-bold text-gray-800 italic"
+                  >"Golden Hour"</span
+                >
+                in emergency medical services.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4 mb-8">
+                <a
+                  href="/Paper9504.pdf"
+                  download
+                  class="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-2xl font-bold text-sm hover:bg-indigo-600 transition-all shadow-lg shadow-gray-200"
+                >
+                  <i class="fa-solid fa-file-pdf"></i> Download Full Paper
+                </a>
+                <a
+                  href="#Projects"
+                  class="flex items-center gap-2 text-indigo-600 font-bold text-sm hover:text-indigo-800 transition-colors"
+                >
+                  <i class="fa-solid fa-arrow-right"></i> View App Prototype
+                </a>
+              </div>
+
+              <details
+                class="group bg-gray-50 rounded-2xl border border-gray-100"
+              >
+                <summary
+                  class="list-none cursor-pointer p-5 flex items-center justify-between"
+                >
+                  <span
+                    class="text-sm font-bold text-gray-700 uppercase tracking-wider"
+                    >Research Abstract</span
+                  >
+                  <div
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm group-open:rotate-180 transition-transform"
+                  >
+                    <i
+                      class="fa-solid fa-chevron-down text-indigo-500 text-xs"
+                    ></i>
+                  </div>
+                </summary>
+                <div class="px-5 pb-5 animate-fade-in">
+                  <p
+                    class="text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4"
+                  >
+                    By leveraging <strong>Google Maps API</strong> and
+                    cloud-based real-time data synchronization, the system
+                    enables location tracking, proximity-based driver
+                    allocation, and intelligent route navigation. <br /><br />
+                    The proposed three-tier architecture demonstrates
+                    significant improvements in booking latency, navigation
+                    accuracy, and emergency response efficiency, effectively
+                    optimizing medical logistics and reducing human error in
+                    time-critical scenarios.
+                  </p>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section id="Contact" class="bg-gray-50 py-16 lg:py-24 overflow-x-hidden">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-20">
+        <div class="relative mb-12 lg:mb-16 text-center lg:text-left">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block"
+          >
+            Get In Touch
+          </h2>
+          <div
+            class="absolute -bottom-2 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-16 sm:w-20 h-1.5 bg-indigo-500 rounded-full"
+          ></div>
+        </div>
+
+        <div class="grid lg:grid-cols-1 gap-8 lg:gap-12 items-start">
+          <div
+            class="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-xl border border-gray-100 space-y-4"
+          >
+            <div
+              class="group p-4 sm:p-5 rounded-2xl bg-gray-50 hover:bg-indigo-50 border border-transparent hover:border-indigo-100 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-3 sm:gap-4 overflow-hidden">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center text-indigo-600 shadow-sm"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="min-w-0">
+                  <p
+                    class="text-[10px] uppercase font-bold text-gray-400 tracking-widest"
+                  >
+                    Email Address
+                  </p>
+                  <p
+                    id="email-text"
+                    class="text-gray-800 font-semibold text-sm sm:text-base break-all sm:truncate"
+                  >
+                    saideepbhange11022002@gmail.com
+                  </p>
+                </div>
+              </div>
+              <button
+                onclick="copyText('email-text', this)"
+                class="w-full sm:w-auto text-indigo-600 text-xs font-bold hover:bg-white px-3 py-2 rounded-lg transition-colors border sm:border-transparent"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div
+              class="group p-4 sm:p-5 rounded-2xl bg-gray-50 hover:bg-purple-50 border border-transparent hover:border-purple-100 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-3 sm:gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 shadow-sm"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-[10px] uppercase font-bold text-gray-400 tracking-widest"
+                  >
+                    Direct Line
+                  </p>
+                  <p
+                    id="phone-text"
+                    class="text-gray-800 font-semibold text-sm sm:text-base"
+                  >
+                    +91 95947 96488
+                  </p>
+                </div>
+              </div>
+              <button
+                onclick="copyText('phone-text', this)"
+                class="w-full sm:w-auto text-purple-600 text-xs font-bold hover:bg-white px-3 py-2 rounded-lg transition-colors border sm:border-transparent"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div class="pt-4 sm:pt-6">
               <a
                 href="mailto:saideepbhange11022002@gmail.com"
-                class="text-decoration-none text-white"
-                >saideepbhange11022002@gmail.com</a
+                class="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3.5 sm:py-4 rounded-2xl font-bold shadow-lg shadow-indigo-200 hover:scale-[1.01] active:scale-95 transition-transform text-sm sm:text-base"
               >
-            </div>
-            <button class="btn text-white" onclick="copyText('email')">
-              Copy
-            </button>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-5">
-              <strong>Phone:</strong>
-              <span id="phone-number">+91-9594796488</span>
-            </div>
-            <button class="btn text-white" onclick="copyText('phone')">
-              Copy
-            </button>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-5">
-              <strong>LinkedIn:</strong>
-              <a
-                href="https://www.linkedin.com/in/saideep-bhange"
-                target="_blank"
-                class="text-decoration-none text-white"
-                >saideep-bhange</a
-              >
-            </div>
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-5">
-              <strong>GitHub:</strong>
-              <a
-                href="https://github.com/SAIDEEPBHANGE"
-                target="_blank"
-                class="text-decoration-none text-white"
-                >SAIDEEPBHANGE</a
-              >
-            </div>
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-5">
-              <strong>Hometown:</strong> Kalyan, Thane, Maharashtra
-            </div>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="fs-5">
-              <strong>Date of Birth:</strong> 11 February 2002
+                <i class="fa-solid fa-paper-plane"></i>
+                Send a Direct Email
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="grid gap-12 lg:grid-cols-3 items-start">
+          <div class="lg:col-span-2">
+            <a
+              href="#Home"
+              class="text-white font-bold text-2xl tracking-tight flex items-center gap-2 group"
+            >
+              <span
+                class="bg-gradient-to-r from-indigo-500 to-purple-500 w-8 h-8 rounded-lg flex items-center justify-center text-sm group-hover:rotate-12 transition-transform"
+                >SB</span
+              >
+              Saideep Bhange
+            </a>
+            <p class="text-gray-400 mt-4 max-w-md leading-relaxed">
+              Software Engineer at Seatrium — specializing in scalable system
+              design and algorithmic problem-solving. Committed to building
+              robust solutions that bridge the gap between complex logic and
+              user experience.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <button
+                id="back-to-top"
+                onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                class="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 text-white px-5 py-2.5 text-sm font-semibold hover:bg-indigo-600 transition-all duration-300 shadow-xl"
+              >
+                <i class="fa-solid fa-arrow-up"></i>
+                Back to top
+              </button>
+
+              <div class="flex items-center gap-3 ml-2">
+                <a
+                  href="mailto:saideepbhange11022002@gmail.com"
+                  class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-lg"
+                  aria-label="Email"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a
+                  href="https://github.com/SAIDEEPBHANGE"
+                  target="_blank"
+                  class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-all shadow-lg"
+                  aria-label="GitHub"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://in.linkedin.com/in/saideep-bhange"
+                  target="_blank"
+                  class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all shadow-lg"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+            <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-link text-indigo-400"></i> Navigation
+            </h4>
+            <ul class="grid grid-cols-1 gap-y-3 text-sm">
+              <li>
+                <a
+                  href="#Home"
+                  class="hover:text-indigo-400 transition-colors flex items-center gap-2"
+                  ><i class="fa-solid fa-chevron-right text-[10px]"></i> Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#AboutMe"
+                  class="hover:text-indigo-400 transition-colors flex items-center gap-2"
+                  ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Experience"
+                  class="hover:text-indigo-400 transition-colors flex items-center gap-2"
+                  ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Projects"
+                  class="hover:text-indigo-400 transition-colors flex items-center gap-2"
+                  ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Contact"
+                  class="hover:text-indigo-400 transition-colors flex items-center gap-2"
+                  ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex items-center gap-2">
+            <p class="text-sm text-gray-500">
+              © <span id="footer-year">2026</span>
+              <span class="text-gray-300 font-medium">Saideep Bhange</span>.
+            </p>
+            <span
+              class="hidden md:block w-1 h-1 bg-gray-700 rounded-full"
+            ></span>
+            <p class="text-sm text-gray-500 italic">Built for performance</p>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <p class="text-xs text-gray-500 flex items-center gap-2">
+              <span
+                class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+              ></span>
+              Available for collaboration
+            </p>
+            <p class="text-xs text-gray-500">
+              Crafted with
+              <i class="fa-solid fa-heart text-pink-500 mx-1"></i> & Tailwind
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ALL Scripts -->
+    <script>
+      /* ================= DETAILS TOGGLE (Experience + Projects) ================= */
+      document.querySelectorAll(".details-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const article = button.closest("article");
+          const details = article.querySelector(".details");
+          if (!details) return;
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          button.setAttribute("aria-expanded", !expanded);
+          details.classList.toggle("hidden");
+          const icon = button.querySelector("i");
+          if (icon) icon.classList.toggle("rotate-180");
+          const label = button.querySelector(".toggle-label");
+          if (label)
+            label.textContent = expanded ? "Show details" : "Hide details";
+        });
+      });
+      /* ================= COPY TO CLIPBOARD ================= */
+      function copyText(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        navigator.clipboard.writeText(el.innerText);
+      }
+      /* ================= SKILLS PROGRESS ANIMATION ================= */
+      document.querySelectorAll("[data-target]").forEach((bar) => {
+        const target = bar.getAttribute("data-target");
+        bar.style.width = target + "%";
+        bar.setAttribute("aria-valuenow", target);
+      });
+      /* ================= SKILLS FILTER ================= */
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+          document.querySelectorAll(".filter-btn").forEach((b) => {
+            b.classList.remove("bg-indigo-600", "text-white");
+            b.classList.add("bg-indigo-100", "text-indigo-700");
+          });
+          btn.classList.add("bg-indigo-600", "text-white");
+          document.querySelectorAll(".skill-row").forEach((row) => {
+            const cat = row.getAttribute("data-category");
+            row.style.display =
+              filter === "all" || cat.includes(filter) ? "" : "none";
+          });
+        });
+      });
+      /* ================= BACK TO TOP ================= */
+      const backToTop = document.getElementById("back-to-top");
+      if (backToTop) {
+        backToTop.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+      }
+      /* ================= FOOTER YEAR ================= */
+      const year = document.getElementById("footer-year");
+      if (year) year.textContent = new Date().getFullYear();
+      /* ================= MOBILE MENU CLOSE ON BACKDROP ================= */
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenu) {
+        mobileMenu.addEventListener("click", (e) => {
+          if (e.target === mobileMenu) mobileMenu.close();
+        });
+      }
+    </script>
   </body>
 </html>
