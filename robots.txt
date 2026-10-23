@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://saideepbhange.github.io/sitemap.xml
