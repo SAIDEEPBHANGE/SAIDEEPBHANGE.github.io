@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link
       rel="icon"
-      type="image/jpeg"
-      href="/assets/SaideepBhangeImage-Cpd2nGvl.jpg"
+      type="image/webp"
+      href="/assets/SaideepBhangeImage-CYRJaIlk.webp"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -13,7 +13,21 @@
       content="Explore Saideep Bhange's software engineering portfolio, featuring projects, technical skills, experience, education, publications, and contact information."
     />
     <link rel="canonical" href="https://saideepbhange.github.io/" />
-    <meta name="theme-color" content="#020617" />
+    <meta name="theme-color" content="#101010" />
+    <script>
+      (function () {
+        var theme = "dark";
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") theme = saved;
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme);
+        if (theme === "light")
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", "#f8fafc");
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Saideep Bhange" />
     <meta property="og:url" content="https://saideepbhange.github.io/" />
@@ -53,19 +67,14 @@
     <link
       rel="preload"
       as="image"
-      href="/assets/SaideepBhangeImage-Cpd2nGvl.jpg"
+      href="/assets/SaideepBhangeImage-CYRJaIlk.webp"
       fetchpriority="high"
     />
     <title>Saideep Bhange | Software Engineer Portfolio</title>
-    <script type="module" crossorigin src="/assets/index-DsVUt43N.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B732tG7w.css">
+    <script type="module" crossorigin src="/assets/index-Ccr0o9N-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BvZh7vu0.css">
   </head>
-  <body
-    class="relative isolate min-h-screen min-w-[320px] overflow-x-hidden bg-linear-to-b from-slate-950 via-slate-900 to-indigo-950 text-slate-100"
-  >
-    <div
-      id="root"
-      class="relative z-10 mx-auto min-h-screen w-full max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-10"
-    ></div>
+  <body class="relative isolate overflow-x-hidden">
+    <div id="root" class="relative z-10 min-h-screen"></div>
   </body>
 </html>
